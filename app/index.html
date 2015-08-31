@@ -44,6 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/flip.css">
     <!-- endbuild-->
 
     <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
@@ -126,70 +127,63 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <!-- Main Content -->
             <div class="content">
+                <button id="saveState"> save</button>
+                <button id="revert"> revert</button>
                 <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
-                    <section data-route="home" >
-                        <!--<paper-material elevation="1"  data-row="1" data-col="1" data-sizex="2" data-sizey="4">-->
-                            <!--<my-greeting></my-greeting>-->
+                    <section data-route="home">
 
-                            <!--<p class="paper-font-subhead">You now have:</p>-->
-                            <!--<my-list></my-list>-->
-
-                            <!--<p class="paper-font-body2">Looking for more Web App layouts? Check out our <a-->
-                                    <!--href="https://github.com/PolymerElements/app-layout-templates">layouts</a>-->
-                                <!--collection. You can also <a-->
-                                        <!--href="http://polymerelements.github.io/app-layout-templates/">preview</a> them-->
-                                <!--live.</p>-->
-                        <!--</paper-material>-->
                         <!--<paper-material elevation="1" data-row="2" data-col="1" data-sizex="2" data-sizey="2">-->
-                            <!--<p class="paper-font-body2">This is another card.</p>-->
+                        <!--<p class="paper-font-body2">This is another card.</p>-->
                         <!--</paper-material>-->
 
 
                         <div class="gridster">
                             <ul>
                                 <!--top row-->
-                                <li data-row="1" data-col="1" data-sizex="6" data-sizey="2">
-                                    Generic Top Greeting Message
+                                <li data-name='1' data-row="1" data-col="1" data-sizex="6" data-sizey="2">
+                                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                Front
+                                            </div>
+                                            <div class="back">
+                                                back
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li data-row="5" data-col="1" data-sizex="1" data-sizey="1">
+                                <li data-name='2' data-row="5" data-col="1" data-sizex="1" data-sizey="1">
+                                    <header>|||</header>
                                     Some widget
                                 </li>
 
                                 <!--second row-->
-                                <li data-row="2" data-col="1" data-sizex="2" data-sizey="4">
+                                <li data-name='3' data-row="2" data-col="1" data-sizex="2" data-sizey="4">
+                                    <header>|||</header>
                                     Large tall box
                                 </li>
 
-                                <li data-row="2" data-col="3" data-sizex="2" data-sizey="2">
+                                <li data-name='4' data-row="2" data-col="3" data-sizex="2" data-sizey="2">
+                                    <header>|||</header>
                                     Standard Square
                                 </li>
-                                <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+                                <li data-name='5' data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+                                    <header>|||</header>
                                     Standard Square
                                 </li>
 
-                                <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+                                <li data-name='6' data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+                                    <header>|||</header>
                                     Small Box
                                 </li>
-                                <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+                                <li data-name='7' data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+                                    <header>|||</header>
                                     Small Box
                                 </li>
-                                <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+                                <li data-name='8' data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+                                    <header>|||</header>
                                     Small Box
-                                </li>
-
-                                <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
-                                    Small Box
-                                </li>
-                                <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
-                                    Small Box
-                                </li>
-
-                                <li data-row="1" data-col="6" data-sizex="2" data-sizey="2">
-                                    Standard Square
-                                </li>
-                                <li data-row="2" data-col="6" data-sizex="2" data-sizey="2">
-                                    Standard Square
                                 </li>
                             </ul>
                         </div>

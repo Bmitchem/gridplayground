@@ -18,6 +18,9 @@ body {
     border: 1px dashed black;
     list-style-type: none;
 }
+.gridster ul{
+    background-color: gray;
+}
 #mainToolbar{
     z-index: 10000;
 }
